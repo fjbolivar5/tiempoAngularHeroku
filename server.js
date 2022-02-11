@@ -3,7 +3,8 @@ const express = require('express');
 const app = express();
 
 // Serve static files
-app.use(express.static(__dirname + '/src'));
+//app.use(express.static(__dirname + '/src'));
+app.use( express.static(path.join(__dirname, '/src/proyecto-tiempo')));
 
 // Send all requests to index.html
 app.get('/*', function(req, res) {
